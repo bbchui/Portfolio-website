@@ -14,35 +14,65 @@
 }
 
 nav {
-  border-bottom: 1px solid #EAEAEB;
   text-align: right;
-  height: 70px;
-  line-height: 70px;
+  height: 45px;
+  line-height: 45px;
+  position: fixed;
+  right: 0;
+  width: 100%;
 }
 
 .menu {
-  margin: 0 30px 0 0;
+  margin: 0 10px 0 0;
 }
 
 .menu a {
+  font-family: "Bebas Neue Bold";
   clear: right;
   text-decoration: none;
   color: gray;
-  margin: 0 10px;
-  line-height: 70px;
+  margin: 12px 10px 0;
+  line-height: 1em;
+  font-size: 1.5em;
+  color: white;
+  display: inline-block;
+  transition: color .3s ease;
+}
+
+.menu a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #82e2d2;
+  display: block;
+  transition: width .3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+  transition: width .3s;
+  color: #82e2d2;
+}
+
+.menu a:hover {
+  color: #82e2d2;
 }
 
 label {
-  margin: 0 40px 0 0;
+  margin: 0 15px 0 0;
   font-size: 26px;
-  line-height: 70px;
+  line-height: 45px;
   display: none;
-  width: 26px;
   float: right;
+  color: white;
 }
 
 #toggle {
   display: none;
+}
+
+.black {
+  background: rgba(31, 29, 29, 0.5);
 }
 
 @media only screen and (max-width: 700px) {
@@ -58,7 +88,7 @@ label {
 
   .menu a {
     display: block;
-    border-bottom: 1px solid #EAEAEB;
+    /*border-bottom: 1px solid #EAEAEB;*/
     margin: 0;
   }
 
@@ -200,11 +230,11 @@ h2.about-me {
   }
 
   h2.about-me {
-    font-size: 3em;
+    font-size: 4em;
   }
 
   .text-about-me p {
-    font-size: 0.85em;
+    font-size: 0.95em;
     padding: 0 1em 1em;
   }
 }

@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="css/_reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300|Roboto+Condensed" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(window).on('scroll', function() {
+        if ($(window).scrollTop()) {
+          $('nav').addClass('black')
+        } else {
+          $('nav').removeClass('black')
+        }
+      })
+    </script>
+
     <title>Brandon Chui</title>
 
   </head>
@@ -18,10 +30,10 @@
       <label for="toggle">&#9776</label>
       <input type="checkbox" id="toggle"/>
       <div class="menu">
-        <a href="#">Home</a>
-        <a href="#">About Me</a>
-        <a href="#">Skills</a>
-        <a href="#">Projects</a>
+        <a href="#">&nbspHome&nbsp</a>
+        <a href="#">&nbspAbout Me&nbsp</a>
+        <a href="#">&nbspSkills&nbsp</a>
+        <a href="#">&nbspProjects&nbsp</a>
       </div>
     </nav>
     <header>
