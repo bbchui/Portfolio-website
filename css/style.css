@@ -44,16 +44,6 @@ header h2 {
   animation: text 3s 1;
 }
 
-@media only screen and (min-width: 1200px) {
-  header h1 {
-    font-size: 8em;
-  }
-
-  header h2 {
-    font-size: 4.8em;
-  }
-}
-
 @keyframes text {
   from {
     opacity: 0;
@@ -82,34 +72,91 @@ header h2 {
 }
 
 .wrapper-about-me {
-  height: 50vh;
+  /*max-width: 1200px;*/
+  margin: auto;
+  /*height: 50vh;*/
   display: grid;
   grid-template-columns: 7fr 3fr;
+  transition: all 2s ease;
 }
 
 .text-about-me {
   display: flex;
   flex-direction: column;
-  padding: 4em;
+  padding: 0 4em;
   align-items: center;
-  justify-content: space-around;
-  text-align: center;
+  /*justify-content: space-around;*/
+  align-self: center;
+  line-height: 1.5;
+  /*height: 100%;*/
+  transition: all 2s ease;
 }
 
 h2.about-me {
-  font-size: 3em;
+  font-size: 5em;
   font-family: "Bebas Neue Light";
+  line-height: 1;
+  /*padding-top: 0.7em;*/
+  transition: font-size 2s ease;
 }
 
 .text-about-me p {
   font-family: Roboto Condensed,sans-serif;
   font-size: 1em;
+  padding: 1em;
+  transition: font-size 2s ease;
 }
 
 .personal-pic {
-  background-image: url('../images/pic.JPG');
-  background-size: cover;
-  background-position: center;
   width: 100%;
   height: 100%;
+}
+
+.personal-pic img {
+  width: 100%;
+  /*min-width: 20rem;*/
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper-about-me {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1100px) {
+  .wrapper-about-me {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .text-about-me {
+    padding: 0 1em;
+  }
+
+  h2.about-me {
+    font-size: 3em;
+  }
+
+  .text-about-me p {
+    font-size: 0.75em;
+    padding: 0 1em 1em;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  header h1 {
+    font-size: 8em;
+  }
+
+  header h2 {
+    font-size: 4.8em;
+  }
+
+  h2.about-me {
+    font-size: 6em;
+  }
+
+  .text-about-me p {
+    font-size: 1.25em;
+    padding: 0.5em;
+  }
 }
