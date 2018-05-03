@@ -66,6 +66,12 @@ label {
   display: none;
   float: right;
   color: white;
+  transition: color 0.3s ease;
+}
+
+label:hover {
+  color: #82e2d2;
+  transition: color 0.3s ease;
 }
 
 #toggle {
@@ -97,7 +103,7 @@ label {
   #toggle:checked + .menu {
     display: block;
     /*background: transparent;*/
-    
+
   }
 
   #toggle:checked + .menu a {
@@ -264,4 +270,14 @@ h2.about-me {
     font-size: 1.25em;
     padding: 0.5em;
   }
+}
+
+section.skills {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: auto;
+}
+
+.skills h1 {
+  grid-column: 1 / 8;
 }
