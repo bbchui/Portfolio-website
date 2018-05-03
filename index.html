@@ -12,12 +12,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script type="text/javascript">
+
       $(window).on('scroll', function() {
+        let scroll = $('input#toggle').is(':checked')
         if ($(window).scrollTop()) {
           $('nav').addClass('black')
-        } else {
+        } else if (scroll) {
+          $('nav').addClass('black')
+        } else if (!scroll && $(window).scrollTop() === 0){
           $('nav').removeClass('black')
         }
+      })
+
+      $(document).ready(function() {
+        $('input#toggle').change(function() {
+          if ($(this).is(':checked')) {
+            $('nav').addClass('black')
+          } else if (!($(this).is(':checked')) && $(window).scrollTop() === 0) {
+            $('nav').removeClass('black')
+          }
+        })
       })
     </script>
 

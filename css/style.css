@@ -14,6 +14,7 @@
 }
 
 nav {
+  z-index: 1;
   text-align: right;
   height: 45px;
   line-height: 45px;
@@ -23,7 +24,7 @@ nav {
 }
 
 .menu {
-  margin: 0 10px 0 0;
+  padding: 0 10px 0 0;
 }
 
 .menu a {
@@ -31,7 +32,7 @@ nav {
   clear: right;
   text-decoration: none;
   color: gray;
-  margin: 12px 10px 0;
+  padding: 12px 10px 0;
   line-height: 1em;
   font-size: 1.5em;
   color: white;
@@ -87,13 +88,20 @@ label {
   }
 
   .menu a {
-    display: block;
-    /*border-bottom: 1px solid #EAEAEB;*/
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 6px 10px 0 0;
   }
 
   #toggle:checked + .menu {
     display: block;
+    /*background: transparent;*/
+    
+  }
+
+  #toggle:checked + .menu a {
+    background: rgba(31, 29, 29, 0.5);
   }
 }
 
