@@ -460,7 +460,7 @@ section.contact-me {
 .contact-me p {
   font-family: "Bebas Neue Light";
   font-size: 1.5em;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .resume {
@@ -469,6 +469,10 @@ section.contact-me {
   justify-content: center;
   align-items: flex-end;
   padding-right: 5em;
+}
+
+.resume p {
+  margin-right: -10px;
 }
 
 .resume a {
@@ -484,7 +488,7 @@ section.contact-me {
 .resume a i{
   font-size: 6em;
   color: #474747;
-  padding: 0.2em 0 0.1em;
+  padding: 0.1em 0;
 }
 
 .closing-notes {
@@ -492,6 +496,7 @@ section.contact-me {
   flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
+  padding-left: 5em;
 }
 
 strong {
@@ -514,6 +519,10 @@ strong {
     align-items: center;
   }
 
+  .resume p {
+    margin-right: 0;
+  }
+
   .resume a {
     font-size: 1.25em;
   }
@@ -525,6 +534,25 @@ strong {
 
   .closing-notes {
     align-items: center;
+    padding-left: 0;
+  }
+
+  .closing-notes p {
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  section.contact-me {
+    grid-column-gap: 12em;
+  }
+
+  .closing-notes {
+    padding-left: 0;
+  }
+
+  .resume {
+    padding-right: 0;
   }
 }
 
@@ -569,16 +597,16 @@ ul li a:hover i {
 }
 
 ul li:nth-child(1) a {
-  border: 1px solid #394149;
-  background: #394149;
+  border: 1px solid #6e5494;
+  background: #6e5494;
 }
 ul li:nth-child(2) a {
   border: 1px solid #0077B5;
   background: #0077B5;
 }
 ul li:nth-child(3) a {
-  border: 1px solid #dc4b3e;
-  background: #dc4b3e;
+  border: 1px solid #dd4b39;
+  background: #dd4b39;
 }
 ul li:nth-child(4) a {
   border: 1px solid #1DA1F2;

@@ -18,14 +18,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script type="text/javascript">
-
       $(window).on('scroll', function() {
-        let scroll = $('input#toggle').is(':checked')
+        let scrol = $('input#toggle').is(':checked')
         if ($(window).scrollTop()) {
           $('nav').addClass('black')
-        } else if (scroll) {
+        } else if (scrol) {
           $('nav').addClass('black')
-        } else if (!scroll && $(window).scrollTop() === 0){
+        } else if (!scrol && $(window).scrollTop() === 0){
           $('nav').removeClass('black')
         }
       })
@@ -39,6 +38,17 @@
           }
         })
       })
+
+      $(document).ready(function() {
+        let scrollLink = $('.scroll')
+
+        scrollLink.click(function(e) {
+          e.preventDefault();
+          $('body,html').animate({
+            scrollTop: $(this.hash).offset().top
+          }, 1000)
+        })
+      })
     </script>
 
     <title>Brandon Chui</title>
@@ -50,20 +60,22 @@
       <label for="toggle">&#9776</label>
       <input type="checkbox" id="toggle"/>
       <div class="menu">
-        <a href="#">&nbspHome&nbsp</a>
-        <a href="#">&nbspAbout Me&nbsp</a>
-        <a href="#">&nbspSkills&nbsp</a>
-        <a href="#">&nbspProjects&nbsp</a>
+        <a class="scroll" href="#home">&nbspHome&nbsp</a>
+        <a class="scroll" href="#about-me">&nbspAbout Me&nbsp</a>
+        <a class="scroll" href="#skills">&nbspSkills&nbsp</a>
+        <a class="scroll" href="#projects">&nbspProjects&nbsp</a>
+        <a class="scroll" href="#contact">&nbspContact&nbsp</a>
+
       </div>
     </nav>
-    <header>
+    <header id="home">
       <h2>Hey! I'm</h2>
       <h1>Brandon Chui</h1>
       <h2>Software Engineer</h2>
       <a href="./images/brandon_chui_resume.pdf" target="_blank" class="btn">Resume</a>
     </header>
 
-    <section class="wrapper-about-me">
+    <section class="wrapper-about-me" id="about-me">
       <div class="text-about-me">
         <h2 class="about-me">About Me</h2>
         <p>
@@ -78,7 +90,7 @@
       </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
 
       <h1 class="title">Skills</h1>
       <div class="skills-wrapper">
@@ -144,7 +156,7 @@
 
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <h1 class="title">Projects</h1>
 
       <div class="projects-wrapper">
@@ -185,7 +197,7 @@
       </div>
     </section>
 
-    <section class="contact-me">
+    <section class="contact-me" id="contact">
       <h1 class="title">Contact Me</h1>
 
       <div class="resume">
@@ -205,22 +217,24 @@
 
       <ul class="social-icons">
         <li>
-          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="https://www.github.com/bbchui" target="_blank"><i class="fab fa-github"></i></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/brandon-chui/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </li>
         <li>
-          <a href="#"><i class="far fa-envelope"></i></a>
+          <a href="mailto:bbchui325@gmail.com?subject=Let's Chat!"><i class="far fa-envelope"></i></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-angellist"></i></a>
+          <a href="https://angel.co/brandon-chui" target="_blank"><i class="fab fa-angellist"></i></a>
         </li>
         <li>
-          <a href="#"><i class="far fa-file-alt"></i></a>
+          <a href="./images/brandon_chui_resume.pdf" target="_blank"><i class="far fa-file-alt"></i></a>
         </li>
       </ul>
 
     </section>
+
   </body>
+
 </html>
