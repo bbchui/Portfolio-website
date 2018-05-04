@@ -445,6 +445,7 @@ h3 a {
 }
 
 section.contact-me {
+  margin-top: -3px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #fbfafa;
@@ -489,6 +490,14 @@ section.contact-me {
   font-size: 6em;
   color: #474747;
   padding: 0.1em 0;
+  transition: all 1s ease;
+}
+
+.resume a:hover i {
+  color: #82e2d2;
+  transform: rotateY(360deg);
+  transition: all 2s ease;
+
 }
 
 .closing-notes {
