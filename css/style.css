@@ -364,7 +364,18 @@ section.projects {
 .projects-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
+  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+}
+
+#grid-item-3 {
+  grid-column: 0/1;
+  grid-row: 2;
+}
+
+#grid-item-4 {
+  grid-column: 1/2;
+  grid-row: 2;
 }
 
 .projects-wrapper div {
@@ -382,19 +393,32 @@ section.projects {
   width: 100%;
 }
 
-.projects-wrapper div a{
+.projects-wrapper div h3{
   font-size: 4em;
   font-family: "Bebas Neue Light";
+  transition: font-size 1s ease;
+  margin: 0 auto;
+}
+
+h3 a {
+  display: block;
   text-decoration: none;
   color: black;
-  transition: font-size 1s ease;
+  width: fit-content;
 }
 
 .projects-wrapper div p {
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-family: Roboto Condensed,sans-serif;
   margin: 1em 2em;
   transition: font-size 1s ease;
+}
+
+@media only screen and (min-width: 1440px) {
+  .projects-wrapper div p {
+    font-size: 1.5em;
+    transition: font-size 1s ease;
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -409,7 +433,7 @@ section.projects {
     padding: 1em 0;
   }
 
-  .projects-wrapper div a {
+  .projects-wrapper div h3 {
     font-size: 3em;
     transition: font-size 1s ease;
   }
